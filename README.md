@@ -2,7 +2,7 @@
 
 ## Why?
 
-This is a demo to show how to use gatekeeper, generally speaking all modern deployments of nginx ingress come with a validation webhook prevents duplicate hosts out of the box, so this is completely unneeded.
+This is a demo to show how to use gatekeeper, generally speaking all modern deployments of nginx ingress come with a validation webhook that prevents duplicate hosts out of the box, so this is completely unneeded.
 
 ## Install local tooling
 
