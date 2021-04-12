@@ -30,7 +30,9 @@ make configure-gatekeeper
 ## Test the policy
 
 ```shell
- kubectl apply -f samples/duplicate-ingress-hosts.yaml
-ingress.networking.k8s.io/ingress-host-example2 created
-Error from server (BadRequest): error when creating "samples/duplicate-ingress-hosts.yaml": admission webhook "validate.nginx.ingress.kubernetes.io" denied the request: host "example-host.example.com" and path "/" is already defined in ingress default/ingress-host-example2
+$ kubectl apply -f samples
+ingress.extensions/ingress-host-example2 created
+Error from server ([unique-ingress-host] ingress host conflicts with an existing ingress <example-host.example.com>
+[unique-ingress-host] ingress host conflicts with an existing ingress <example-host.example.com>): error when creating "samples/separate2-duplicate-ingress-hosts.yaml": admission webhook "validation.gatekeeper.sh" denied the request: [unique-ingress-host] ingress host conflicts with an existing ingress <example-host.example.com>
+[unique-ingress-host] ingress host conflicts with an existing ingress <example-host.example.com>
 ```
